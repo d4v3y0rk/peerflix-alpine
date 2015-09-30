@@ -1,6 +1,8 @@
 # peerflix-alpine
 Run [peerflix](https://www.npmjs.com/package/peerflix) and [openvpn](https://openvpn.net/) inside a docker container with a [localtunnel](https://www.npmjs.com/package/localtunnel) to connect to.
 
+This is setup to use the useast restrictive openvpn profile from [privateinternetaccess.com](http://privateinternetaccess.com). It connects over TCP port 443. It should work on public "free" wifi access points as they generally do not restrict https traffic. 
+
 ## tl;dr
 Add a file called `login.conf` with your privateinternetaccess.com username and password in it like so
 ```
@@ -56,4 +58,3 @@ If you want ot run the container without starting the vpn etc. start it like so:
 
 that will drop you into the container at the bash prompt. You can start the vpn with:
  - `sh startvpn.sh`
- 
